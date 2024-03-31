@@ -1,13 +1,17 @@
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Gymnast from "./pages/Gymnast";
+import { Style } from "./providers/style";
 
-function App() {
+export default function App() {
 	return (
 		<div className="App">
-			<header className="App-header">
-				Begin
-			</header>
+			<Style>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/gymnast/:id" element={<Gymnast />} />
+				</Routes>
+			</Style>
 		</div>
 	);
 }
-
-export default App;
