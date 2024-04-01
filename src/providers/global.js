@@ -16,11 +16,22 @@ export function Global({ children }) {
 		else setMobile(false)
 	}
 
+	const updateUser = (user) => {
+		console.log(user)
+		setUser(user)
+	}
+
+	const signOut = () => {
+		console.log("Signing Out")
+		setUser()
+	}
+
 	const memoizedValue = useMemo(
 		() => ({
 			mobile: mobile,
 			user: user,
-			setUser: setUser()
+			updateUser: updateUser,
+			signOut: signOut
 		}), [mobile, user]
 	);
 

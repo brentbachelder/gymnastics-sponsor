@@ -10,9 +10,10 @@ export const HomeStyle = (mobile) => {
 		headerContainer: {
 			width: "100%",
 			padding: "12px 24px",
-			backgroundColor: "rgba(0, 0, 0, .2)",
+			backgroundColor: "#49334f",
 			display: "flex",
-			justifyContent: "center"
+			justifyContent: "center",
+			position: "fixed"
 		},
 		headerInner: {
 			width: "100%",
@@ -24,11 +25,12 @@ export const HomeStyle = (mobile) => {
 		headerLogo: {
 			width: "auto",
 			height: "auto",
-			maxHeight: "40px"
+			maxHeight: "40px",
+			cursor: "pointer"
 		},
 		headerLinkContainer: {
 			display: "flex",
-			gap: "48px",
+			gap: "18px",
 			alignItems: "center"
 		},
 		headerButton: {
@@ -39,7 +41,7 @@ export const HomeStyle = (mobile) => {
 			border: "0",
 			color: "#ffffff",
 			cursor: "pointer",
-			fontWeight: "600",
+			fontWeight: "400",
 			backgroundColor: "transparent"
 		},
 		heroHomeContainer: {
@@ -54,26 +56,26 @@ export const HomeStyle = (mobile) => {
 			display: "flex",
 			width: "100%",
 			maxWidth: "1180px",
-			justifyContent: "space-between",
+			justifyContent: mobile ? "center" : "space-between",
 			alignItems: "center"
 		},
 		heroSearchContainer: {
 			display: "flex",
 			flexDirection: "column",
-			width: "100%",
+			width: mobile ? "100%" : "50%",
 			maxWidth: "570px",
-			padding: mobile ? "0 24px" : "0",
+			padding: "0 36px",
 			textAlign: mobile ? "center" : "left"
 		},
 		heroSearchTitle: {
-			fontSize: "80px",
-			lineHeight: "80px",
+			fontSize: window.innerWidth < 1200 && !mobile ? "60px" : "80px",
+			lineHeight: window.innerWidth < 1200 && !mobile ? "60px" : "80px",
 			color: "#ffffff",
 			marginBottom: "4px"
 		},
 		heroSearchSub: {
-			fontSize: "24px",
-			lineHeight: "32px",
+			fontSize: window.innerWidth < 1200 && !mobile ? "18px" : "24px",
+			lineHeight: window.innerWidth < 1200 && !mobile ? "24px" : "32px",
 			color: "#ffffff"
 		},
 		heroSearchInputContainer: {
@@ -107,9 +109,16 @@ export const HomeStyle = (mobile) => {
 			color: "#ffffff"
 		},
 		heroGraphic: {
-			width: "100%",
+			width: "50%",
 			height: "auto",
 			maxWidth: "610px"
+		},
+		infoContainer: {
+			width: "100%",
+			height: "200vh",
+			display: "flex",
+			flexDirection: "column",
+			backgroundColor: "#ffffff"
 		}
 	}
 }

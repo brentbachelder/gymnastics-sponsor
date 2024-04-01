@@ -1,9 +1,10 @@
-export default function Container({ children, main = false, style = {} }) {
+export default function Container({ children, main = false, bgColor = 'transparent', style = {} }) {
 	const outer = {
 		width: "100vw",
 		flex: main ? '1 0' : null,
 		display: "flex",
-		justifyContent: "center"
+		justifyContent: "center",
+		backgroundColor: bgColor
 	}
 
 	const inner = {

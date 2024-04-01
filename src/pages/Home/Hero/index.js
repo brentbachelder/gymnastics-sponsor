@@ -9,7 +9,7 @@ export default function Hero() {
 	console.log(style.home)
 
 	return (
-		<div style={style.home.heroContainer}>
+		<div style={style.home.heroContainer} id='hero-container'>
 			<Header />
 			<div style={style.home.heroHomeContainer}>
 				<div style={style.home.heroHomeInner}>
